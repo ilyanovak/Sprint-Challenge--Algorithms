@@ -92,13 +92,38 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+
     def sort(self):
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
 
+        # At the beginning of the call, if the robot can no longer move right
+            # Return None
+        # Swap items at the very beginning of the line where the call starts
+        # Keep moving the robot right until it no longer can do so
+            # If the item in the robot's hand is less than what is on the line
+                # Swap items
+        # NEED TO TEST: Swap items no matter what once you're at the end of the line
+        # Keep moving left until item on the line is None
+            # If the item in the robot's hand is greater than what is on the line
+                # Swap items
+        # Swap items no matter what once you're back to the beginning of the line
+        # Move once to the right to start to start next call in next item on the line
+        # Call self.sort()
+
+
+        # # end of list element starts at last element and iterates to second element
+        # for end_of_list in reversed(range(1, len(get_list()))):
+        #     # current item starts at first element and iterates to end of list element
+        #     for curr_item in range(end_of_list):
+        #         # next item is set to element that follows current item
+        #         next_item = curr_item + 1
+        #         # if value at current item is greater than value ext next element
+        #         if arr[curr_item] > arr[next_item]:
+        #             # switch current item and next item values
+        #             arr[curr_item], arr[next_item] = arr[next_item], arr[curr_item]
+        # return arr
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
