@@ -10,7 +10,7 @@ a)  a = 0
     while (a < n * n * n):
       a = a + n * n
 ```
-
+for (let a = 0; a < n*n*n; a+= n*n)
 
 ```
 b)  sum = 0

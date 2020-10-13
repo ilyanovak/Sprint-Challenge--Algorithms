@@ -98,32 +98,38 @@ class SortingRobot:
         Sort the robot's list.
         """
 
-        # At the beginning of the call, if the robot can no longer move right
+        # Base: At the beginning of the call, if the robot can no longer move right
+        if not self.can_move_right():
             # Return None
+            return None
         # Swap items at the very beginning of the line where the call starts
-        # Keep moving the robot right until it no longer can do so
+        self.swap_item()
+        # While loop: Keep moving the robot right until it no longer can do so
+        while self.can_move_right():
+            self.move_right()
             # If the item in the robot's hand is less than what is on the line
+            if self.compare_item() == -1:
                 # Swap items
-        # NEED TO TEST: Swap items no matter what once you're at the end of the line
-        # Keep moving left until item on the line is None
+                self.swap_item()
+        # Swap items no matter what once you're at the end of the line
+        self.swap_item()
+        # While loop: Keep moving left until item on the line is None
+        while self.can_move_left() and self.compare_item() != None:
+            self.move_left()
             # If the item in the robot's hand is greater than what is on the line
+            if self.compare_item() == 1:
                 # Swap items
+                self.swap_item()
         # Swap items no matter what once you're back to the beginning of the line
+        self.swap_item()
         # Move once to the right to start to start next call in next item on the line
+        self.move_right()
         # Call self.sort()
+        print(self._list)
+        self.sort()
 
 
-        # # end of list element starts at last element and iterates to second element
-        # for end_of_list in reversed(range(1, len(get_list()))):
-        #     # current item starts at first element and iterates to end of list element
-        #     for curr_item in range(end_of_list):
-        #         # next item is set to element that follows current item
-        #         next_item = curr_item + 1
-        #         # if value at current item is greater than value ext next element
-        #         if arr[curr_item] > arr[next_item]:
-        #             # switch current item and next item values
-        #             arr[curr_item], arr[next_item] = arr[next_item], arr[curr_item]
-        # return arr
+
 
 if __name__ == "__main__":
     # Test our your implementation from the command line

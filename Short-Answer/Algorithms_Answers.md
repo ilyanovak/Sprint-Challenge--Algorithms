@@ -10,7 +10,7 @@ a)
 5. a3 = 0 + n^2 + n^2 + n^2
 6. ai = i(n^2)
 7. So, do while i(n^2) < n^3, or do until i(n^2) = n^3 => i = n
-8. So, number of iterations is just n, so LINEAR
+8. So, number of iterations is just n, so LINEAR = O(n)
 
 b)
 1. sum is irrelevant
@@ -24,14 +24,14 @@ b)
 9. If solve for k, then k = log(n)/log(2)
 10. So, number of iteration of while loop is log of n
 11. So for loop is just doing log(n) n times in a row, so it is LINEAR
-
+12. CORRECT: O(nlogn)
 c)
 1. bunnies,	iterations
 2. 0,	1
 3. 1,	2
 4. 2,	3
 5. 3,   4
-6. so LINEAR function of number of bunnies
+6. so LINEAR function of number of bunnies O(n)
 
 ## Exercise II
 
@@ -56,3 +56,5 @@ Run while loop while top floor is greater than low floor
 print sum, which is number of eggs dropped and/or broken
 
 print mid floor, which is estimate of f
+
+ALTERNATIVE METHOD: start at bottom and keep dropping and stop when it breaks
